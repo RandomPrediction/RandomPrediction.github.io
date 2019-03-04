@@ -24,6 +24,7 @@ description: A virtual proof that name is awesome!
 # List of links in the navigation bar
 navbar-links:
   About Me: "aboutme"
+  Tags: "https://randomprediction.github.io/tags/"
   Resources:       
     - GitHub Pages: "https://pages.github.com/"  
 
