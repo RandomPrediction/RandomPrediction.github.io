@@ -152,7 +152,7 @@ img {
   padding-top: 5px;
 }
 .navbar-custom.top-nav-short .navbar-brand-logo img {
-  height: 400px;
+  height: 40px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -171,7 +171,7 @@ img {
 .navbar-custom .avatar-container {
   position: absolute;
   left: 50%;
-  width: 100px;
+  width: 500px;
   margin-top: -25px;
 }
 .navbar-custom .avatar-container  .avatar-img-border {
@@ -195,7 +195,7 @@ img {
 
 @media only screen and (min-width: 768px) {
   .navbar-custom .avatar-container {
-    width: 100px;
+    width: 500px;
     margin-top: -50px;
   }
 
