@@ -2,6 +2,7 @@
 layout: post
 title: From 0 to remote GPU server (part 0)
 subtitle: Introduction
+image: /img/hdwr_intro.jpg
 tags: Hardware
 ---
 
