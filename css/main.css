@@ -171,7 +171,7 @@ img {
 .navbar-custom .avatar-container {
   position: absolute;
   left: 50%;
-  width: 125px;
+  width: 150px;
   margin-top: -25px;
 }
 .navbar-custom .avatar-container  .avatar-img-border {
@@ -195,7 +195,7 @@ img {
 
 @media only screen and (min-width: 768px) {
   .navbar-custom .avatar-container {
-    width: 125px;
+    width: 150px;
     margin-top: -50px;
   }
 
@@ -467,6 +467,7 @@ footer .theme-by {
   transition: opacity 1s linear;
 }
 .intro-header .page-heading {
+  padding: 100px;
   text-align: center;
 }
 .intro-header.big-img .page-heading,
