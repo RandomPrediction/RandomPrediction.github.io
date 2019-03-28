@@ -8,7 +8,7 @@ tags: Hardware
 
 In this blog post I am going to describe the process I went through while selecting PC parts for my GPU server. Target audience is people who pretty much know nothing about PC parts. If you have already built at least once PC, there will probably be nothing new for you here. But if you are just like me not so long ago, then this resource can be quite useful.
 
-#### General advice
+## General advice
 
 Before we dive into individual parts, let's talk about a few general advices. 
 
@@ -22,7 +22,7 @@ Lastly, credit where credit's due, and I have to cite one of the best blog posts
 
 In the following discussion I am not going to specify exact parts I was buying. The purpose of the post is rather to familiarize the novice reader with required hardware, and to present some advices and thoughts on trade-offs. This is as opposed to simply outlining final solution. Some blogs do that, and at the end of the post I will provide the links to my favorite ones. 
 
-#### All the parts we will need 
+## All the parts we will need 
 
 We will look to choose the following parts:
 
@@ -42,7 +42,7 @@ Now let's dive into each of these parts one by one.
 
 
 
-##### Motherboard
+## Motherboard
 
 Motherboard will determine what kind of architecture is possible. The key requirement for me was that it would be able to support 4 GPUs. As I have figured out while thinking that I will add a few GPUs to my main PC, this may not be possible. Motherboards have some number of PCIe connections installed, and each GPU will require separate PCIe connection. So if there is only a single PCIe connection, you can only have one GPU on that motherboard. So here is the first selection criteria - motherboard should have at least 4 PCIe connections. Those connections are also evaluated from x16 to x1. This determines theoretical bandwidth of how much data could be transfered in 1s to and from GPU. This may sound as very important, given that moving data to and from GPU is a potential bottleneck in deep learning computation. But as far as I know, if GPU is connected to x8 PCIe, then performance hit is minimal. Note that this discussion focuses on capacity numbers. Physical size of PCIe connections should all be as x16, because GPUs are all expecting x16 physical size connection. You can just look at longest PCIe connection, and that one will correspond to x16. There should be at least 3 more connections as long as the longest one. 
 
@@ -70,7 +70,7 @@ So here we are with our main requirements:
 
   
 
-##### CPU
+## CPU
 
 First question - Intel of AMD (two main producers of CPUs, but Intel dominates). I have chosen Intel. Reasoning was that Intel is more dominant player, and I was afraid that some libraries will be specifically optimized for Intel by default (their MKL and BLAS, LAPACK), and I will have troubles to fully understanding whether I have any bottlenecks and how to overcome them with AMD CPU. This may be totally false impression though! And consensus is probably that AMD is better bang for the buck at the moment. But I just wanted to minimize potential problems with my first build. 
 
@@ -96,7 +96,7 @@ CPU considerations:
 
   
 
-#### CPU cooler
+## CPU cooler
 
 Liquid or air, that's the question here. My answer was liquid. Air coolers can be very massive, and may not fit into a small case (we will talk about cases later). I was thinking that there will be more trouble to install massive parts onto the motherboard, as they will start blocking my view of the rest of the motherboard as well. So once again, given this was my first build, I went with a liquid AIO (all-in-one) cooler option which appeared to be less likely to cause some problems down the road of the build process. 
 
@@ -110,7 +110,7 @@ Summa summarum, I went with liquid AIO cooler, but I think this decision is not 
 
 
 
-#### GPUs
+## GPUs
 
 Alright, now we're talking! This is probably the most important decision. It will be the most expensive as well. We are doing all this "build-business" to embrace the power of GPUs, so let's not mess it up here (like I did, to some extent). Recommendation is to buy RTX 2018 Ti. 
 
@@ -118,7 +118,7 @@ I, unfortunately, bought GTX 1080 Ti. [Nvidia has ended their production](https:
 
 So then I bought RTX 2080 Ti. Sounds good so far... but! I managed to buy a super wide card (taking up three side case slots), as shown in the picture below.
 
-![GPU](img/rtx2.png)
+![GPU](/img/rtx2.png)
 
 Typically GPU width is only 2 expansion slots. I missed this one being having 3 expansion slots instead, because I though that is impossible! Now this card is blocking one of the PCIe connections, which means I cannot have 4 GPUs on my motherboard. To solve this, I will later try to take the GPUs out of the case via PCIe risers. Will probably write a post about that as well, once this is done. 
 
@@ -134,7 +134,7 @@ Eventually, this is what I would do, if I could travel back into the past:
 
   
 
-#### PSU
+## PSU
 
 Don't save money here. Buy high efficiency PSU (gold or platinum). That is good from two perspectives - your electricity bills will be smaller, and also PSU will probably work longer before needing a replacement. How much watts? RTX 2080 Ti consumes 250W. So 4 of those will be 1000W. Then let's give 200W to CPU, 200W for other components, and we have 1400W. So I bought 1600W just to be safe. As you can read in [this blog post](http://l7.curtisnorthcutt.com/build-pro-deep-learning-workstation), too weak PSU can be a point of failure of the whole build. 
 
@@ -142,7 +142,7 @@ Don't save money here. Buy high efficiency PSU (gold or platinum). That is good 
 
   
 
-#### RAM
+## RAM
 
 This is relatively straightforward decision. You will need DDR4 type memory (DDR4 just stand for latest technology of RAM). You will also see DDR4-XXXX, where following 4 numbers supposedly relate to memory speed in Mhz. But as [this](https://www.youtube.com/watch?v=D_Yt4vSZKVk) video explains (which I again actually noticed in Tim's blog), there is no practical benefit of buying RAM with Mhz speed above 2400. This simply will not improve anything, unless you will fiddle substantially with BIOS. 
 
@@ -156,7 +156,7 @@ Controlling for these metrics, price variation mostly depends on decoration of D
 
   
 
-#### SSD/HDD
+## SSD/HDD
 
 HDD (Hard Disk Drive) is slow (~100Mb/s read/write speed), but cheap. Primary purpose for HDD will be to hold all your datasets. SSD (Solid State Drive) is more expensive, but considerably faster (can be more than 500Mb/s read/write speed). This is where you would keep the dataset of project you are working on at the moment. 
 
@@ -176,7 +176,7 @@ After all this complicated terminology
 
   
 
-#### Case
+## Case
 
 Final decision = easy decision. Case type needs to matched to your motherboard type. After that, you will typically have a choice of Mid Tower vs Full Tower. I would recommend Full Tower. In fact, I would simply recommend as large as possible motherboard compatible case. You can never get into trouble if your case is large. There is no such thing as too-large case. On the other hand, you can get into various problems if the case is too small (for your GPUs, for CPU cooler, etc.). 
 
@@ -186,7 +186,7 @@ Last benefit of bigger case is that it will have more fans (so better cooling). 
 
 
 
-##### That's all!
+### That's all!
 
 Thanks for reading till then end! 
 
