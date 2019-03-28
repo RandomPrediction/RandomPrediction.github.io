@@ -2,7 +2,7 @@
 layout: post
 title: From 0 to remote GPU server (part 1)
 subtitle: Selecting PC parts
-image: /img/MB_link.jpg
+image: /img/MB_link.png
 tags: Hardware
 ---
 
@@ -40,13 +40,15 @@ Notice I do not have screen as a separate part here. That's because I will talk 
 
 Now let's dive into each of these parts one by one.
 
+
+
 ##### Motherboard
 
 Motherboard will determine what kind of architecture is possible. The key requirement for me was that it would be able to support 4 GPUs. As I have figured out while thinking that I will add a few GPUs to my main PC, this may not be possible. Motherboards have some number of PCIe connections installed, and each GPU will require separate PCIe connection. So if there is only a single PCIe connection, you can only have one GPU on that motherboard. So here is the first selection criteria - motherboard should have at least 4 PCIe connections. Those connections are also evaluated from x16 to x1. This determines theoretical bandwidth of how much data could be transfered in 1s to and from GPU. This may sound as very important, given that moving data to and from GPU is a potential bottleneck in deep learning computation. But as far as I know, if GPU is connected to x8 PCIe, then performance hit is minimal. Note that this discussion focuses on capacity numbers. Physical size of PCIe connections should all be as x16, because GPUs are all expecting x16 physical size connection. You can just look at longest PCIe connection, and that one will correspond to x16. There should be at least 3 more connections as long as the longest one. 
 
 Those connections should be appropriately spaced out. I know this does not sound concrete at all, but you will see that some motherboards have PCIe connections closer to each other, and some have further. The further the better. That's because GPUs usually take 2 slots of PCIe connections in terms of their width, so if you have PCIe connections too close to each other, one GPU will block connection for the other. This is not unsolvable, you could use extensions to connect GPUs to motherboard, but why bother on your first build?
 
-![MB](img/MB.png)
+![MB](/img/MB.png)
 
 
 
@@ -59,9 +61,14 @@ The second thing to realize is that motherboard will determine what kind of CPU 
 So here we are with our main requirements:
 
 * 4 PCIe connections, x16 in physical size, preferably widely separated
+
 * Compatible with chosen CPU
+
 * Onboard wireless (optional)
+
 * Board debugger (optional)
+
+  
 
 ##### CPU
 
@@ -77,13 +84,17 @@ Then there is just the optimization left with your budget vs number of cores and
 
 My search conditions could be seen below.
 
-![CPU choice](img/CPU_choice2.png)
+![CPU choice](/img/CPU_choice2.png)
 
 CPU considerations:
 
 * Lower bound on PCIe lanes around 40 for 4 GPU system
+
 * Match memory to the one available in your motherboard
+
 * Optimize speed and number of cores based on your budget
+
+  
 
 #### CPU cooler
 
@@ -96,6 +107,8 @@ Lastly, liquid coolers should be at least somewhat more efficient than air coole
 Air cooling would be cheaper though. And liquid cooler can experience a pump break, and leak water onto the motherboard. 
 
 Summa summarum, I went with liquid AIO cooler, but I think this decision is not very important. 
+
+
 
 #### GPUs
 
@@ -114,14 +127,20 @@ If you think my fails ended there, that's very nice of you, but you are unfortun
 Eventually, this is what I would do, if I could travel back into the past:
 
 * Buy 4 RTX 2080 Ti
+
 * Blower style fan
+
 * Width of 2
+
+  
 
 #### PSU
 
 Don't save money here. Buy high efficiency PSU (gold or platinum). That is good from two perspectives - your electricity bills will be smaller, and also PSU will probably work longer before needing a replacement. How much watts? RTX 2080 Ti consumes 250W. So 4 of those will be 1000W. Then let's give 200W to CPU, 200W for other components, and we have 1400W. So I bought 1600W just to be safe. As you can read in [this blog post](http://l7.curtisnorthcutt.com/build-pro-deep-learning-workstation), too weak PSU can be a point of failure of the whole build. 
 
 * 1600W gold or platinum PSU
+
+  
 
 #### RAM
 
@@ -132,7 +151,10 @@ One advice, however, would be to buy 16Gb per piece (RAM prices are called DIMMs
 Controlling for these metrics, price variation mostly depends on decoration of DIMMs. 
 
 * DDR4-(2400-3000) 16Gb RAM DIMMs
+
 * (Optional) RGB decoration, if you want to have Christmas tree at your place all year round
+
+  
 
 #### SSD/HDD
 
@@ -152,6 +174,8 @@ After all this complicated terminology
 
 * Safest bet is 1Tb SATA SSD
 
+  
+
 #### Case
 
 Final decision = easy decision. Case type needs to matched to your motherboard type. After that, you will typically have a choice of Mid Tower vs Full Tower. I would recommend Full Tower. In fact, I would simply recommend as large as possible motherboard compatible case. You can never get into trouble if your case is large. There is no such thing as too-large case. On the other hand, you can get into various problems if the case is too small (for your GPUs, for CPU cooler, etc.). 
@@ -160,7 +184,9 @@ Second benefit of larger case is that it is easier to assemble all parts. You ha
 
 Last benefit of bigger case is that it will have more fans (so better cooling). In a similar way, since there will be more  air volume inside the case, you will have less problems with overheating (by analogy, AC takes more time to heat a larger room). 
 
-###### That's all!
+
+
+##### That's all!
 
 Thanks for reading till then end! 
 
