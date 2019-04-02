@@ -467,16 +467,20 @@ footer .theme-by {
   transition: opacity 1s linear;
 }
 .intro-header .page-heading {
-  text-align: center;
+  text-align: center;  
 }
-.intro-header.big-img .page-heading,
+/*.intro-header.big-img .page-heading,
 .intro-header.big-img .post-heading {
   padding: 100px 0;
   color: #FFF;
   text-shadow: 1px 1px 3px #000;
+}*/
+.intro-header.big-img .page-heading h1 {
+  margin-top: 250px;/*0*/
+  font-size: 50px;
 }
 .intro-header .page-heading h1 {
-  margin-top: 0;
+  margin-top: 0px;/*0*/
   font-size: 50px;
 }
 .intro-header .post-heading h1 {
@@ -490,7 +494,7 @@ footer .theme-by {
   display: block;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 300;
-  margin: 10px 0 0;
+  margin: 10px 0 0;/*10px*/
 }
 .intro-header .post-heading .post-subheading {
   margin-bottom: 20px;
@@ -523,11 +527,11 @@ footer .theme-by {
     margin-top: 180px;
   }
   .intro-header.big-img {
-    margin-top: 91px;  /* Full navbar is small navbar + 20px padding on each side when expanded */
+    margin-top: 50px;  /* Full navbar is small navbar + 20px padding on each side when expanded */
   }
   .intro-header.big-img .page-heading,
   .intro-header.big-img .post-heading  {
-    padding: 150px 0;
+    padding: 0px 0;
   }
   .intro-header .page-heading h1 {
     font-size: 80px;
