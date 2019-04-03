@@ -476,7 +476,7 @@ footer .theme-by {
   text-shadow: 1px 1px 3px #000;
 }*/
 .intro-header.big-img .page-heading h1 {
-  margin-top: 250px;/*0*/
+  margin-top: 100px;/*0*/
   font-size: 50px;
 }
 .intro-header .page-heading h1 {
@@ -523,6 +523,9 @@ footer .theme-by {
   display: none;
 }
 @media only screen and (min-width: 768px) {
+  .intro-header.big-img .page-heading h1 {
+  margin-top: 250px;/*0*/  
+  }
   .intro-header {
     margin-top: 180px;
   }
