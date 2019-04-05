@@ -560,6 +560,9 @@ footer .theme-by {
   display: none;
 }
 @media only screen and (max-width: 365px) {
+  .header-section.has-img .no-img h1 {
+    font-size: 0px;
+  }
   .intro-header.big-img .page-heading h1 {    
     font-size: 0px;
   }
@@ -580,6 +583,9 @@ footer .theme-by {
   }
 }
 @media only screen and (max-width: 325px) {
+  .header-section.has-img .no-img h1 {
+    font-size: 0px;
+  }
   .intro-header.big-img .page-heading h1 {    
     font-size: 0px;
   }
