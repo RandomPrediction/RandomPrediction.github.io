@@ -4,6 +4,7 @@ title: About me
 ---
 
 What better describes the person than the things he or she likes? Well, I don't know, maybe there are some better descriptions. Anyway, here are some of my favorites:) 
+
 (a bit of classics, a bit of more recent things, a bit of funny things)
 
 <table class="table">
