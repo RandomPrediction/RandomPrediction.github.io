@@ -560,6 +560,9 @@ footer .theme-by {
   display: none;
 }
 @media only screen and (max-width: 365px) {
+  .intro-header .page-heading h1 {
+    font-size:0;
+  }
   .intro-header.big-img .page-heading h1 {    
     font-size: 0px;
   }
@@ -569,6 +572,7 @@ footer .theme-by {
   .intro-header.big-img {
     width: 100%;
     height: 110px;
+    margin-left:-10px;
   }
   .intro-header.big-img .page-heading,
   .intro-header.big-img .post-heading {
@@ -579,11 +583,15 @@ footer .theme-by {
   }
 }
 @media only screen and (max-width: 325px) {
+  .intro-header .page-heading h1 {
+    font-size:0;
+  }
   .intro-header.big-img .page-heading h1 {    
     font-size: 0px;
   }
   .intro-header.big-img {
     height: 110px;
+    margin-left:-10px;
   }
 }
 
